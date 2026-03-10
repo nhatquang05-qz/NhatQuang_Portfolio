@@ -1,5 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
+import { FaGithub, FaYoutube } from 'react-icons/fa';
 import '../assets/styles/Projects.css';
+import demoImg from '../assets/images/Picture1.png'; 
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -34,14 +36,22 @@ const Projects = () => {
           <div className="tech-tags">
             <span>ReactJS</span>
             <span>Node.js</span>
-            <span>MongoDB</span>
+            <span>MySQL</span>
             <span>Express</span>
             <span>Socket.io</span>
+          </div>
+          <div className="project-links">
+            <a href="https://github.com/nhatquang05-qz/StoryVerse" target="_blank" rel="noreferrer" className="project-link">
+              <FaGithub /> Source Code
+            </a>
+            <a href="https://youtu.be/PhGzisMhG-E" target="_blank" rel="noreferrer" className="project-link">
+              <FaYoutube /> Live Demo
+            </a>
           </div>
         </div>
         <div className="project-img-wrapper">
            <img 
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" 
+            src={demoImg} 
             alt="StoryVerse Project" 
           />
         </div>

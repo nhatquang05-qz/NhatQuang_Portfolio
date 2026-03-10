@@ -1,33 +1,122 @@
 .contact-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 4rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 242, 254, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
 }
 
 .contact-subtitle {
   color: #00f2fe;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .contact-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
   font-weight: 700;
-  color: #e2e8f0;
-  margin-bottom: 1.5rem;
 }
 
 .contact-desc {
-  font-size: 1.1rem;
   color: #a0aec0;
+  font-size: 1.15rem;
   line-height: 1.8;
+  margin-bottom: 3.5rem;
+  max-width: 650px;
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background: rgba(0, 242, 254, 0.05);
+  border-color: rgba(0, 242, 254, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 242, 254, 0.05);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  color: #00f2fe;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.1);
+}
+
+.info-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-socials-large {
+  display: flex;
+  gap: 2.5rem;
   margin-bottom: 3rem;
 }
 
+.contact-socials-large a {
+  color: #a0aec0;
+  font-size: 2.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-socials-large a:hover {
+  color: #00f2fe;
+  transform: translateY(-5px) scale(1.1);
+}
+
 .contact-btn {
-  display: inline-block;
+  padding: 1.2rem 3.5rem;
   font-size: 1.2rem;
-  padding: 1.2rem 3rem;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }

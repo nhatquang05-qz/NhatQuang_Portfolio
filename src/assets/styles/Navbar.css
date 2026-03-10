@@ -75,8 +75,23 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width: 140px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  color: #00f2fe;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .nav-resume-btn:hover {
   background: rgba(0, 242, 254, 0.1);
   box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);

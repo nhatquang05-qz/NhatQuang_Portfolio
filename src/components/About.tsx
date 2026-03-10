@@ -1,5 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import { FaUserAlt, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap, FaLanguage } from 'react-icons/fa';
+import profileImg from '../assets/images/profile.webp'; 
 import '../assets/styles/About.css';
 
 const fadeUp: Variants = {
@@ -33,18 +34,23 @@ const About = () => {
             <li><FaUserAlt /> 24/12/2005 - Nam</li>
             <li><FaMapMarkerAlt /> Thành phố Hồ Chí Minh</li>
             <li><FaGraduationCap /> Trường Đại học Công nghệ thông tin – ĐHQG HCM</li>
-            <li><FaLanguage /> TOEIC L&R 850/990 </li>
+            <li><FaLanguage /> TOEIC L&R 850/990</li>
             <li><FaEnvelope /> duongnguyennhatquang@gmail.com</li>
             <li><FaPhone /> 0787 808 010</li>
           </ul>
         </motion.div>
 
         <motion.div 
+          className="about-image-container"
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
-          style={{ display: 'flex', justifyContent: 'center' }}
         >
-          <div style={{ fontSize: '15rem', color: 'rgba(0, 242, 254, 0.2)' }}>
-            <FaUserAlt />
+          <div className="image-wrapper">
+            <img 
+              src={profileImg} 
+              alt="Dương Nguyễn Nhật Quang" 
+              className="profile-image"
+            />
+            <div className="image-border"></div>
           </div>
         </motion.div>
       </div>

@@ -85,3 +85,30 @@
   border-radius: 8px;
   font-weight: 600;
 }
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #00f2fe;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.project-link svg {
+  font-size: 1.4rem;
+}

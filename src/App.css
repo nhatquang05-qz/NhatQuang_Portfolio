@@ -94,3 +94,34 @@
   color: #00f2fe;
   font-size: 1.5rem;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #050816; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f2fe, #4facfe); 
+  border-radius: 10px; 
+  border: 2px solid #050816; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4facfe, #00f2fe);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.4); 
+}
+
+.cursor, 
+.cursor-blink, 
+[class*="cursor"] {
+  animation: none !important;
+  opacity: 1 !important; 
+}
