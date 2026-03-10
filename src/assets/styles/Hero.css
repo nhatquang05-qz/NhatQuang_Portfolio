@@ -1,0 +1,57 @@
+.hero-section {
+  align-items: flex-start;
+  background: radial-gradient(circle at top left, rgba(79, 172, 254, 0.1), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(0, 242, 254, 0.1), transparent 40%);
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  color: #00f2fe;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.hero-name {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
+}
+
+.hero-role {
+  font-size: 2.5rem;
+  color: #a0aec0;
+  margin-bottom: 2rem;
+}
+
+.hero-desc {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #718096;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #050816;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 242, 254, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: 3rem; }
+  .hero-role { font-size: 1.5rem; }
+}
