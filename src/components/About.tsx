@@ -23,17 +23,17 @@ const About = () => {
           variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
         >
           <p>
-            Xin chào! Cảm ơn bạn đã ghé thăm góc nhỏ của tôi. Tôi sinh năm 2005 và hiện đang là sinh viên tại Đại học Công nghệ Thông tin - ĐHQG TP.HCM.
+            Hi bro! Cảm ơn bạn đã ghé thăm góc nhỏ của mình. Mình đang là sinh viên năm 3 tại trường Đại học Công nghệ Thông tin - ĐHQG TP.HCM.
           </p>
           <p>
-            Với tư duy logic, khả năng tự học cao và nền tảng Tiếng Anh vững chắc, tôi luôn sẵn sàng đối mặt với các bài toán khó trong lập trình. Ngoài những lúc code, tôi thường tìm cảm hứng qua việc nghe nhạc, xem phim, du lịch và chơi Billards.
+            Ngoài những lúc code, mình thường tìm cảm hứng qua việc nghe nhạc, xem phim, du lịch và chơi Billards.
           </p>
           
           <ul className="info-list">
             <li><FaUserAlt /> 24/12/2005 - Nam</li>
             <li><FaMapMarkerAlt /> Thành phố Hồ Chí Minh</li>
-            <li><FaGraduationCap /> Đại học Công nghệ thông tin – ĐHQG HCM</li>
-            <li><FaLanguage /> TOEIC 850/990 & Tiếng Việt bản xứ</li>
+            <li><FaGraduationCap /> Trường Đại học Công nghệ thông tin – ĐHQG HCM</li>
+            <li><FaLanguage /> TOEIC L&R 850/990 </li>
             <li><FaEnvelope /> duongnguyennhatquang@gmail.com</li>
             <li><FaPhone /> 0787 808 010</li>
           </ul>

@@ -1,49 +1,64 @@
 .hero-section {
   align-items: flex-start;
-  background: radial-gradient(circle at top left, rgba(79, 172, 254, 0.1), transparent 40%),
-              radial-gradient(circle at bottom right, rgba(0, 242, 254, 0.1), transparent 40%);
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
 }
 
 .hero-greeting {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #00f2fe;
-  margin-bottom: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 1.5rem;
   letter-spacing: 2px;
 }
 
 .hero-name {
-  font-size: 5rem;
+  font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 700;
   line-height: 1.1;
+  color: #e2e8f0;
   margin-bottom: 1rem;
-  text-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
 }
 
 .hero-role {
-  font-size: 2.5rem;
-  color: #a0aec0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
+  color: #718096;
   margin-bottom: 2rem;
 }
 
 .hero-desc {
-  max-width: 600px;
+  max-width: 550px;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #718096;
+  color: #a0aec0;
   margin-bottom: 3rem;
 }
 
-.btn-primary {
-  padding: 1rem 2.5rem;
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-primary, .btn-outline {
+  padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
   color: #050816;
   background: linear-gradient(90deg, #00f2fe, #4facfe);
   border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -51,7 +66,73 @@
   box-shadow: 0 10px 20px rgba(0, 242, 254, 0.4);
 }
 
-@media (max-width: 768px) {
-  .hero-name { font-size: 3rem; }
-  .hero-role { font-size: 1.5rem; }
+.btn-outline {
+  color: #00f2fe;
+  background: transparent;
+  border: 1px solid #00f2fe;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 242, 254, 0.1);
+  transform: translateY(-3px);
+}
+
+
+.floating-icon {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.15;
+  filter: blur(1px);
+}
+.icon-react { right: 10%; top: -10%; color: #61dafb; font-size: 8rem; }
+.icon-node { right: 30%; bottom: 0; color: #68a063; font-size: 6rem; }
+.icon-mongo { left: 40%; top: -20%; color: #47a248; font-size: 5rem; }
+
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.scroll-indicator:hover { opacity: 1; }
+
+.scroll-indicator span {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a0aec0;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #a0aec0;
+  border-radius: 20px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #00f2fe;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+  0% { top: 8px; opacity: 1; }
+  100% { top: 25px; opacity: 0; }
 }

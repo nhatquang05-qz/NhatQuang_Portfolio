@@ -1,0 +1,33 @@
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.contact-subtitle {
+  color: #00f2fe;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: #a0aec0;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 1.2rem 3rem;
+}

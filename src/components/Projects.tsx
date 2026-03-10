@@ -23,7 +23,7 @@ const Projects = () => {
         <div className="project-info">
           <h3>StoryVerse</h3>
           <p>
-            Hệ sinh thái Đọc truyện và Mạng xã hội toàn diện. Một project Full-Stack đồ sộ được tôi xây dựng độc lập hoàn toàn từ Database, Backend APIs cho đến Giao diện Frontend.
+            Hệ sinh thái Đọc truyện và Mạng xã hội toàn diện. Một project Full-Stack được xây dựng độc lập hoàn toàn từ Database, Backend APIs cho đến Giao diện Frontend.
           </p>
           <ul className="feature-list">
             <li>Hệ thống E-commerce: Quản lý giỏ hàng, đặt truyện vật lý, nạp xu và thanh toán.</li>
