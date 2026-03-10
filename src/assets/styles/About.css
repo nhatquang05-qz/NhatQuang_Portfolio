@@ -78,3 +78,20 @@
 .image-wrapper:hover .image-border {
   transform: translate(5px, 5px);
 }
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+
+  .image-wrapper {
+    width: 200px; 
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .info-list li {
+    font-size: 0.95rem;
+  }
+}

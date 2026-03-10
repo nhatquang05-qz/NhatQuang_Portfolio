@@ -23,3 +23,17 @@ html, body {
   max-width: none;
   text-align: left;
 }
+@media (max-width: 768px) {
+  :root {
+    --padding-x: 5%;
+  }
+  
+  .section-container {
+    padding: 60px var(--padding-x);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}

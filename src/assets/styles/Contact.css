@@ -105,18 +105,21 @@
   letter-spacing: 1px;
 }
 
+
 @media (max-width: 768px) {
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
-  
+
+  .contact-wrapper {
+    padding: 2rem 1rem;
+  }
+
   .contact-info-cards {
-    flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
   .info-card {
-    width: 100%;
-    max-width: 350px;
+    min-width: 100%; 
   }
 }

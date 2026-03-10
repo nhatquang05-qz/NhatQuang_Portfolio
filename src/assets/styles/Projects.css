@@ -112,3 +112,24 @@
 .project-link svg {
   font-size: 1.4rem;
 }
+
+
+@media (max-width: 768px) {
+  .project-showcase {
+    flex-direction: column-reverse; 
+    gap: 20px;
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tech-tags {
+    justify-content: center;
+  }
+}
