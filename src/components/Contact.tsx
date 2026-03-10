@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../assets/styles/Contact.css';
 
 const fadeUp: Variants = {
@@ -37,10 +37,6 @@ const Contact = () => {
           <div className="info-card">
             <FaPhone className="info-icon" />
             <p>0787 808 010</p>
-          </div>
-          <div className="info-card">
-            <FaMapMarkerAlt className="info-icon" />
-            <p>TP. Hồ Chí Minh</p>
           </div>
         </motion.div>
 

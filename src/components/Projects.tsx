@@ -1,7 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { FaGithub, FaYoutube } from 'react-icons/fa';
 import '../assets/styles/Projects.css';
-import demoImg from '../assets/images/Picture1.png'; 
+import demoImg from '../assets/images/Picture1.webp'; 
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
