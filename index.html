@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon-Cz4XV7yo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nhatquang_portfolio</title>
+    <title>Nhật Quang Portfolio</title>
     <script type="module" crossorigin src="/assets/index-Wa99cPD8.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DigPNbve.css">
   </head>
+
   <body>
     <div id="root"></div>
+    <script>
+      if (window.location.search.includes("fbclid")) {
+        const url = new URL(window.location);
+        url.searchParams.delete("fbclid");
+        window.history.replaceState({}, document.title, url.pathname);
+      }
+    </script>
+
   </body>
 </html>
