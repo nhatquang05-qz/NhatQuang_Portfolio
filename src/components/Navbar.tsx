@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import '../assets/styles/Navbar.css';
 
-const Navbar = () => {
+interface NavbarProps {
+  setCurrentTab: (tab: string) => void;
+  currentTab: string;
+}
+
+const Navbar = ({ setCurrentTab, currentTab }: NavbarProps) => {
   const [displayText, setDisplayText] = useState('');
   const fullText = "Hi! I'm Quang";
   
@@ -32,22 +37,17 @@ const Navbar = () => {
     };
   }, []);
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => scrollTo('hero')}>Quang.Dev</div>
+      <div className="logo" onClick={() => setCurrentTab('home')}>Quang.Dev</div>
       
       <ul className="nav-links">
-        <li><a onClick={() => scrollTo('about')}>About</a></li>
-        <li><a onClick={() => scrollTo('skills')}>Skills</a></li>
-        <li><a onClick={() => scrollTo('projects')}>Projects</a></li>
-        <li><a onClick={() => scrollTo('contact')}>Contact</a></li>
+        <li><a onClick={() => setCurrentTab('about')} style={{ color: currentTab === 'about' ? '#00f2fe' : '' }}>About</a></li>
+        <li><a onClick={() => setCurrentTab('skills')} style={{ color: currentTab === 'skills' ? '#00f2fe' : '' }}>Skills</a></li>
+        <li><a onClick={() => setCurrentTab('projects')} style={{ color: currentTab === 'projects' ? '#00f2fe' : '' }}>Projects</a></li>
+        <li><a onClick={() => setCurrentTab('gaming')} style={{ color: currentTab === 'gaming' ? '#00f2fe' : '' }}>Gaming</a></li>
+        <li><a onClick={() => setCurrentTab('billiards')} style={{ color: currentTab === 'billiards' ? '#00f2fe' : '' }}>Billiards</a></li>
+        <li><a onClick={() => setCurrentTab('contact')} style={{ color: currentTab === 'contact' ? '#00f2fe' : '' }}>Contact</a></li>
       </ul>
 
       <div className="nav-socials">

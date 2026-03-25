@@ -1,15 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact'; 
+import Gaming from './components/Gaming';
+import Billiards from './components/Billiards';
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('home');
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, [currentTab]);
 
   return (
     <div className="portfolio-app">
@@ -19,7 +33,7 @@ function App() {
         <div className="bg-glow glow-3"></div>
       </div>
       
-      <Navbar />
+      <Navbar setCurrentTab={setCurrentTab} currentTab={currentTab} />
 
       {currentTab !== 'home' && (
         <button className="back-to-home" onClick={() => setCurrentTab('home')}>
@@ -47,6 +61,14 @@ function App() {
               <div className="icon-box">📧</div>
               <span>Contact</span>
             </div>
+            <div className="desktop-icon" onClick={() => setCurrentTab('gaming')}>
+              <div className="icon-box">🎮</div>
+              <span>Gaming</span>
+            </div>
+            <div className="desktop-icon" onClick={() => setCurrentTab('billiards')}>
+              <div className="icon-box">🎱</div>
+              <span>Billiards</span>
+            </div>
           </div>
         </div>
       )}
@@ -55,6 +77,8 @@ function App() {
       {currentTab === 'skills' && <Skills />}
       {currentTab === 'projects' && <Projects />}
       {currentTab === 'contact' && <Contact />}
+      {currentTab === 'gaming' && <Gaming />}
+      {currentTab === 'billiards' && <Billiards />}
 
       <Footer />
     </div>
