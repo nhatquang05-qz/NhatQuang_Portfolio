@@ -1,6 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import { FaUserAlt, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap, FaLanguage } from 'react-icons/fa';
-import profileImg from '../assets/images/profile.webp'; 
+import profileImg from '../assets/images/profile.jpg'; 
 import '../assets/styles/About.css';
 
 const fadeUp: Variants = {
