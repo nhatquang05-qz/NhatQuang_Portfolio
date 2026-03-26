@@ -9,6 +9,7 @@ import Gaming from './components/Gaming';
 import Billiards from './components/Billiards';
 import Footer from './components/Footer';
 import './App.css';
+import Music from './components/Music';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('home');
@@ -61,6 +62,10 @@ function App() {
               <div className="icon-box">📧</div>
               <span>Contact</span>
             </div>
+            <div className="desktop-icon" onClick={() => setCurrentTab('music')}>
+              <div className="icon-box">🎧</div>
+              <span>Music</span>
+            </div>
             <div className="desktop-icon" onClick={() => setCurrentTab('gaming')}>
               <div className="icon-box">🎮</div>
               <span>Gaming</span>
@@ -77,6 +82,7 @@ function App() {
       {currentTab === 'skills' && <Skills />}
       {currentTab === 'projects' && <Projects />}
       {currentTab === 'contact' && <Contact />}
+      {currentTab === 'music' && <Music />}
       {currentTab === 'gaming' && <Gaming />}
       {currentTab === 'billiards' && <Billiards />}
 

@@ -1,0 +1,125 @@
+.music-wrapper {
+  align-items: stretch;
+  padding-top: 120px;
+}
+
+.music-container {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.music-sidebar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 2rem;
+}
+
+.music-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.music-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.music-menu-item.active {
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.music-menu-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.music-menu-title {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.music-menu-item.active .music-menu-title {
+  color: #00f2fe;
+}
+
+.music-main-content {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+}
+
+.music-main-title {
+  font-size: 2.5rem;
+  color: #00f2fe;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.music-main-desc {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.music-player-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.music-iframe {
+  border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+  .music-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  .music-sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+  .music-header {
+    text-align: center;
+  }
+  .music-main-title {
+    font-size: 2rem;
+  }
+  .music-iframe {
+    height: 500px;
+  }
+}

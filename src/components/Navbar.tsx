@@ -45,6 +45,7 @@ const Navbar = ({ setCurrentTab, currentTab }: NavbarProps) => {
         <li><a onClick={() => setCurrentTab('about')} style={{ color: currentTab === 'about' ? '#00f2fe' : '' }}>About</a></li>
         <li><a onClick={() => setCurrentTab('skills')} style={{ color: currentTab === 'skills' ? '#00f2fe' : '' }}>Skills</a></li>
         <li><a onClick={() => setCurrentTab('projects')} style={{ color: currentTab === 'projects' ? '#00f2fe' : '' }}>Projects</a></li>
+        <li><a onClick={() => setCurrentTab('music')} style={{ color: currentTab === 'music' ? '#00f2fe' : '' }}>Music</a></li>
         <li><a onClick={() => setCurrentTab('gaming')} style={{ color: currentTab === 'gaming' ? '#00f2fe' : '' }}>Gaming</a></li>
         <li><a onClick={() => setCurrentTab('billiards')} style={{ color: currentTab === 'billiards' ? '#00f2fe' : '' }}>Billiards</a></li>
         <li><a onClick={() => setCurrentTab('contact')} style={{ color: currentTab === 'contact' ? '#00f2fe' : '' }}>Contact</a></li>

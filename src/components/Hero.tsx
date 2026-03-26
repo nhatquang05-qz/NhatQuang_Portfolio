@@ -59,13 +59,13 @@ const Hero = () => {
             {text}<span className="cursor-blink">|</span>
           </motion.h2>
           <motion.p variants={itemVariants} className="hero-desc">
-            Mình là một lập trình viên Fullstack đam mê xây dựng những hệ thống web toàn diện. 
-            Hiện tại, mình đang tập trung vào việc tạo ra các sản phẩm có trải nghiệm người dùng tối ưu mạnh mẽ.
+            Mình là một lập trình viên. Ngoài việc code ra mình còn thích chơi game, nghe nhạc, xem phim, du lịch và chơi billards nữa.
+            Chào mừng bạn đến với góc nhỏ của mình :3
           </motion.p>
-          <motion.div variants={itemVariants} className="hero-btns">
+          {/* <motion.div variants={itemVariants} className="hero-btns">
             <a onClick={() => scrollTo('projects')} className="btn-primary">Xem Dự Án</a>
             <a onClick={() => scrollTo('contact')} className="btn-outline">Liên Hệ Ngay</a>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <motion.div className="floating-icon icon-react" animate={{ y: [0, -20, 0], rotate: [0, 360] }} transition={{ repeat: Infinity, duration: 8, ease: "linear" as const }}><FaReact /></motion.div>
